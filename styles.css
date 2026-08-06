@@ -285,6 +285,8 @@ main {
     font-weight: 500;
     font-size: 1.05rem;
     line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .fade-in {

@@ -585,6 +585,13 @@ function initPlayer(): void {
     });
 }
 
+function initFullscreen(): void {
+    const cap = (window as any).Capacitor;
+    if (cap && cap.Plugins && cap.Plugins.SystemBars) {
+        cap.Plugins.SystemBars.hide().catch(() => undefined);
+    }
+}
+
 function startPlayback(): void {
     const audio = document.getElementById("player-audio") as HTMLAudioElement | null;
     if (!audio) return;
@@ -612,5 +619,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initFadeInAnimations();
     createSparkles();
     initPlayer();
+    initFullscreen();
     startPlayback();
 });
