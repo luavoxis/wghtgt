@@ -569,6 +569,18 @@ main {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+    .intro-wghtgt {
+        font-size: 3rem;
+    }
+
+    .intro-question {
+        font-size: 1.5rem;
+    }
+
+    .intro-show {
+        font-size: 1.8rem;
+    }
+
     .title {
         font-size: 2.6rem;
     }
@@ -619,5 +631,83 @@ main {
 
     .player-lyric {
         font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-wghtgt {
+        font-size: 2.4rem;
+    }
+
+    .intro-question {
+        font-size: 1.25rem;
+    }
+
+    .intro-show {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .hello-kitty-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .main-message {
+        font-size: 1rem;
+        padding: 2rem 1.3rem;
+    }
+
+    .main-message h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-sub {
+        font-size: 0.9rem;
+    }
+
+    .message-card {
+        padding: 1.5rem;
+    }
+
+    .message-card p {
+        font-size: 0.95rem;
+    }
+
+    .promise-card {
+        padding: 1.5rem;
+    }
+
+    .promise-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .promise-card p {
+        font-size: 0.95rem;
+    }
+
+    .daily-message {
+        font-size: 1rem;
+        line-height: 1.6;
+        min-height: 80px;
+    }
+
+    .daily-tagalog {
+        font-size: 0.9rem;
+    }
+
+    .player-lyrics-box {
+        min-height: 60px;
+    }
+
+    .player-lyric {
+        font-size: 1.15rem;
     }
 }
