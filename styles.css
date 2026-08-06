@@ -167,6 +167,8 @@ main {
     margin-bottom: 0.4rem;
     animation: glow-pulse 3s ease-in-out infinite;
     line-height: 1.2;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 @keyframes glow-pulse {
@@ -584,7 +586,11 @@ main {
     }
 
     .title {
-        font-size: 2.6rem;
+        font-size: 2.2rem;
+        padding: 0 0.5rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 100%;
     }
 
     .hello-kitty-icon {
@@ -650,7 +656,11 @@ main {
     }
 
     .title {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
+        padding: 0 0.5rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 100%;
     }
 
     .hello-kitty-icon {

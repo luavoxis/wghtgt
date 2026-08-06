@@ -589,6 +589,9 @@ function initFullscreen(): void {
     const cap = (window as any).Capacitor;
     if (cap && cap.Plugins && cap.Plugins.SystemBars) {
         cap.Plugins.SystemBars.hide().catch(() => undefined);
+        setTimeout(() => {
+            cap.Plugins.SystemBars.hide().catch(() => undefined);
+        }, 1500);
     }
 }
 
@@ -622,3 +625,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initFullscreen();
     startPlayback();
 });
+
+window.addEventListener("load", initFullscreen);
