@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>wghtgt - We Gonna Heal Together</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="intro" class="intro">
+        <p class="intro-text intro-wghtgt" id="intro-wghtgt">wghtgt</p>
+        <p class="intro-text intro-question" id="intro-question">do you know what it means?</p>
+        <p class="intro-text intro-show" id="intro-show">let me show you.</p>
+    </div>
+
+    <div id="stars-container"></div>
+    
+    <main>
+        <header class="hero">
+            <div class="hello-kitty-icon">
+                <img src="assets/hellokitty.png" alt="Hello Kitty" class="kitty-img">
+            </div>
+            <h1 class="title">We Gonna Heal Together</h1>
+        </header>
+
+        <section class="message-section">
+            <div class="floating-hearts" id="floating-hearts"></div>
+            
+            <div class="message-card main-message">
+                <img src="assets/sadhellokitty.png" alt="Sad Hello Kitty" class="sad-kitty-img">
+                <h2>Dear Samantha,</h2>
+                <p>This website was made to be a little light of hope for you.</p>
+                <p>I know everything feels so heavy right now, but I am always by your side.</p>
+                <p>I know I ruined everything. I ruined you along with myself. But you never left my side; you never walked away. Through it all, you stayed right behind me and supported me no matter what. You overlooked every wrong I did to you and simply loved me. Your love for me is pure and beautiful, but I am too foolish and too cold to deserve it. I'm sorry for everything.</p>
+                <p>I will never let anyone hurt you, and I never will. You've been more of a mother and father to me than my own parents ever were. And I know that if my family had faced all of this, they would probably have left me long ago. But you never let go of me. There was always hope in you for me, and I've only now realized how many times I let that hope down.</p>
+                <p>I want to make you a promise: from now on, only you, me, and our love for each other will remain. If you ever leave me, that would be your greatest right, because what I did to you, no one could carry so easily. I know you are strong, Samantha, and I am proud of you, my beauty. I will never forgive myself for making you sad, for hurting you. Maybe I will hate myself forever, but as long as you are with me, all the hatred inside me melts away, and I lose myself in your beauty and your pure heart.</p>
+                <p>I hope you read everything I wrote. I worked so hard on this, I barely slept, but it was worth it for you. Even death would be worth it for you, mimi. I love you so much. I love you more than anything. I love you more than I could ever express. And know this: you will always feel this love. Keep loving me like this, okay, honeybun? I love you so much, baby.</p>
+            </div>
+
+            <div class="messages-grid">
+                <div class="message-card fade-in" data-delay="0">
+                    <img src="assets/heart.png" alt="Heart" class="card-img">
+                    <p>You are one of the strongest people in this world</p>
+                </div>
+                <div class="message-card fade-in" data-delay="1">
+                    <img src="assets/sakura.png" alt="Sakura" class="card-img">
+                    <p>These hard times will pass, I promise</p>
+                </div>
+                <div class="message-card fade-in" data-delay="2">
+                    <img src="assets/love.png" alt="Love" class="card-img">
+                    <p>You deserve to be loved and to be happy</p>
+                </div>
+                <div class="message-card fade-in" data-delay="3">
+                    <img src="assets/stars.png" alt="Stars" class="card-img">
+                    <p>Every day is a new beginning, every day is new hope</p>
+                </div>
+                <div class="message-card fade-in" data-delay="4">
+                    <img src="assets/hug.png" alt="Hug" class="card-img">
+                    <p>I am here, I am right here for you</p>
+                </div>
+                <div class="message-card fade-in" data-delay="5">
+                    <img src="assets/help.png" alt="Help" class="card-img">
+                    <p>We will get through this together, we will heal together</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="baros-section">
+            <div class="baros-card">
+                <img src="assets/baros/baros.png" alt="Baros" class="baros-img">
+                <p class="baros-caption">Baros is here too, holding something just for you</p>
+            </div>
+        </section>
+
+        <section class="promise-section">
+            <h2 class="section-title">My Promises</h2>
+            <p class="section-sub">made with all my heart</p>
+            <div class="promise-cards">
+                <div class="promise-card">
+                    <img src="assets/baros/mimibaros.png" alt="Mini Baros" class="promise-img">
+                    <h3>I will always be by your side</h3>
+                    <p>Night or day, whenever you need me</p>
+                </div>
+                <div class="promise-card">
+                    <img src="assets/baros/mimibaros2.png" alt="Mini Baros" class="promise-img">
+                    <h3>I will listen to you</h3>
+                    <p>What you say, what you can't say, I'm here for it all</p>
+                </div>
+                <div class="promise-card">
+                    <img src="assets/baros/mimibaros3.png" alt="Mini Baros" class="promise-img">
+                    <h3>We will laugh together again</h3>
+                    <p>Just like the old days, I promise</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="daily-section">
+            <h2 class="section-title">Today's Message</h2>
+            <div class="daily-card">
+                <p class="daily-message" id="daily-message"></p>
+                <button class="new-message-btn" id="new-message-btn">Another Message</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="player" class="player">
+        <audio id="player-audio" src="assets/No Other Heart.mp3" preload="auto"></audio>
+        <div id="player-lyrics-box" class="player-lyrics-box">
+            <p id="player-lyric" class="player-lyric"></p>
+        </div>
+    </div>
+
+    <script type="module" src="dist/script.js"></script>
+</body>
+</html>
