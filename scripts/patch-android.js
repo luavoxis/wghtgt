@@ -24,6 +24,18 @@ const stylesPath = path.join(
   "values",
   "styles.xml"
 );
+const bgColorPath = path.join(
+  root,
+  "android",
+  "app",
+  "src",
+  "main",
+  "res",
+  "values",
+  "ic_launcher_background.xml"
+);
+const iconsDir = path.join(root, "assets", "android-icons");
+const resDir = path.join(root, "android", "app", "src", "main", "res");
 
 const desired = `package com.wghtgt.app;
 
@@ -99,6 +111,35 @@ if (fs.existsSync(stylesPath)) {
       `<style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">\n        ${launchTheme}`
     );
   }
+  if (styles.includes('android:background">@drawable/splash')) {
+    styles = styles.replace(
+      'android:background">@drawable/splash',
+      'android:background">@android:color/black'
+    );
+  }
   fs.writeFileSync(stylesPath, styles);
   console.log("Patched styles.xml for fullscreen splash theme.");
+}
+
+if (fs.existsSync(bgColorPath)) {
+  let bg = fs.readFileSync(bgColorPath, "utf8");
+  if (!bg.includes("#000000")) {
+    bg = bg.replace("#FFFFFF", "#000000");
+    fs.writeFileSync(bgColorPath, bg);
+    console.log("Patched launcher background color to black.");
+  }
+}
+
+const densities = ["mdpi", "hdpi", "xhdpi", "xxhdpi", "xxxhdpi"];
+if (fs.existsSync(iconsDir)) {
+  densities.forEach((d) => {
+    ["ic_launcher", "ic_launcher_round", "ic_launcher_foreground"].forEach((name) => {
+      const srcIcon = path.join(iconsDir, `${name}-${d}.png`);
+      const destIcon = path.join(resDir, `mipmap-${d}`, `${name}.png`);
+      if (fs.existsSync(srcIcon)) {
+        fs.copyFileSync(srcIcon, destIcon);
+      }
+    });
+  });
+  console.log("Patched launcher icons from favicon.");
 }
